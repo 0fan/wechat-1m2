@@ -1,0 +1,153 @@
+.border {
+	background-repeat: no-repeat;
+}
+.border._t {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0);
+	background-position: top;
+	-moz-background-size: 100% 1px;
+	background-size: 100% 1px;
+}
+.border._r {
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: linear-gradient(270deg, #eee 50%, transparent 0);
+	background-position: right;
+	-moz-background-size: 1px 100%;
+	background-size: 1px 100%;
+}
+.border._b {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: linear-gradient(0deg, #eee 50%, transparent 0);
+	background-position: bottom;
+	-moz-background-size: 100% 1px;
+	background-size: 100% 1px;
+}
+.border._l {
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(90deg, #eee 49%, transparent 0); /* why49? */
+	background-position: left;
+	-moz-background-size: 1px 100%;
+	background-size: 1px 100%;
+}
+.border._a {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: top, right, bottom, left;
+	-moz-background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+	background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+}
+.border._t._r {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(right, #eee 50%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(270deg, #eee 50%, transparent 0);
+	background-position: top, right;
+	-moz-background-size: 100% 1px, 1px 100%;
+	background-size: 100% 1px, 1px 100%;
+}
+.border._t._b {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0);
+	background-position: top, bottom;
+	-moz-background-size: 100% 1px, 100% 1px;
+	background-size: 100% 1px, 100% 1px;
+}
+.border._t._l {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: top, left;
+	-moz-background-size: 100% 1px, 1px 100%;
+	background-size: 100% 1px, 1px 100%;
+}
+.border._r._b {
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0);
+	background-position: right, bottom;
+	-moz-background-size: 1px 100%, 100% 1px;
+	background-size: 1px 100%, 100% 1px;
+}
+.border._r._l {
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: right, left;
+	-moz-background-size: 1px 100%, 1px 100%;
+	background-size: 1px 100%, 1px 100%;
+}
+.border._b._l {
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(bottom, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(bottom, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(bottom, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(0deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: bottom, left;
+	-moz-background-size: 100% 1px, 1px 100%;
+	background-size: 100% 1px, 1px 100%;
+}
+.border._t._r._b {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0);
+	background-position: top, right, bottom;
+	-moz-background-size: 100% 1px, 1px 100%, 100% 1px;
+	background-size: 100% 1px, 1px 100%, 100% 1px;
+}
+.border._t._r._l {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: top, right, left;
+	-moz-background-size: 100% 1px, 1px 100%, 1px 100%;
+	background-size: 100% 1px, 1px 100%, 1px 100%;
+}
+.border._r._b._l {
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(right, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(right, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(right, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(270deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: right, bottom, left;
+	-moz-background-size: 1px 100%, 100% 1px, 1px 100%;
+	background-size: 1px 100%, 100% 1px, 1px 100%;
+}
+.border._b._l._t {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(49%, #eee), color-stop(0, transparent));
+	background-image: -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0), -webkit-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0), -moz-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0), -o-linear-gradient(left, #eee 49%, transparent 0);
+	background-image: linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0), linear-gradient(90deg, #eee 49%, transparent 0);
+	background-position: top, bottom, left;
+	-moz-background-size: 100% 1px, 100% 1px, 1px 100%;
+	background-size: 100% 1px, 100% 1px, 1px 100%;
+}
