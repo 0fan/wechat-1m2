@@ -1585,4 +1585,5 @@ window.$ === undefined && (window.$ = Zepto)
     }
   }
 })(Zepto)
-
+/* 禁用router */
+$.config = {router: false}
