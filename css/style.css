@@ -4,6 +4,15 @@
 .m-content.padding10 {
 	padding: 10px
 }
+.fontSize14 {
+	font-size: 14px;
+}
+.bgWhite {
+	background: #fff;
+}
+.indent{
+	text-indent: 2em;
+}
 .m-card {
 	position: relative;
 	padding: 10px;
