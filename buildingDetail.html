@@ -26,7 +26,16 @@
 
 			<!-- content -->
 			<div class="content">
-				<div class="m-focus"><img src="img/temp.jpg"></div>
+				<!-- m-focus -->
+			  <div class="swiper-container m-focus">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide"><img src="img/temp.jpg"></div>
+			      <div class="swiper-slide"><img src="img/temp.jpg"></div>
+			      <div class="swiper-slide"><img src="img/temp.jpg"></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			  </div>
+			  <!-- /m-focus -->
 				<div class="m-focus-title">保利观澜</div>
 				<!-- m-info -->
 				<div class="m-info">
@@ -123,18 +132,18 @@
 						<div class="m-slide" id="slide-1">
 							<div class="m-slide-scroller">
 								<ul>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
 								</ul>
 							</div>
 						</div>
@@ -148,18 +157,18 @@
 						<div class="m-slide" id="slide-2">
 							<div class="m-slide-scroller">
 								<ul>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
-									<li><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
 								</ul>
 							</div>
 						</div>
@@ -239,6 +248,51 @@
 <script>
 	$(document).ready(function(){
 
+		// 图片预览
+		var viewPlanning     = $('.viewPlanning'),
+				viewModel        = $('.viewModel'),
+				viewPlanningData = [],
+				viewModelData    = [],
+				viewPlanningFull,
+				viewModelFull
+
+		viewPlanning.each(function(index,item) {
+			item = $(item);
+			viewPlanningData.push({
+				url: item.find('img').attr('src'),
+				caption: item.data('caption') || ''
+			});
+		});
+
+		viewModel.each(function(index,item) {
+			item = $(item);
+			viewModelData.push({
+				url: item.find('img').attr('src'),
+				caption: item.data('caption') || ''
+			});
+		});
+
+		viewPlanningFull = $.photoBrowser({
+			photos: viewPlanningData
+		});
+
+		viewModelFull = $.photoBrowser({
+			photos: viewModelData
+		});
+
+		$(document).on('click', '.viewPlanning', function() {
+			viewPlanningFull.open();
+		});
+
+		$(document).on('click', '.viewModel', function() {
+			viewModelFull.open();
+		});
+
+		$(document).on('click', '.photo-browser-close-link', function() {
+			$.reinitSwiper();
+		});
+		// 图片预览结束
+
 		var scrollers = $('.m-slide-scroller');
 
 		for(var i = 0,len = scrollers.length; i < len; i++) {
@@ -255,6 +309,7 @@
 			scrollY: false,
 			preventDefault: false
 		});
+
 		new IScroll('#slide-2',{
 			eventPassthrough: true,
 			scrollX: true,
@@ -307,5 +362,5 @@
 
 	});
 
-</script>http://10.0.10.17:8080/img/temp.jpg
-</html>http://10.0.10.17:8080/img/temp.jpg
+</script>
+</html>
