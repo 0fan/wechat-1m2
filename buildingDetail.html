@@ -132,18 +132,18 @@
 						<div class="m-slide" id="slide-1">
 							<div class="m-slide-scroller">
 								<ul>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='1的' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='啊2' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='3' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='4' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='5' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='6' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='7' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='8' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='9' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='10' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='11' class="viewPlanning" ><img src="img/temp.jpg"></li>
+									<li data-caption='12' class="viewPlanning" ><img src="img/temp.jpg"></li>
 								</ul>
 							</div>
 						</div>
@@ -157,10 +157,10 @@
 						<div class="m-slide" id="slide-2">
 							<div class="m-slide-scroller">
 								<ul>
-									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
-									<li data-caption='图片' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='1' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='2' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='3' class="viewModel"><img src="img/temp.jpg"></li>
+									<li data-caption='4' class="viewModel"><img src="img/temp.jpg"></li>
 									<li class="viewModel"><img src="img/temp.jpg"></li>
 									<li class="viewModel"><img src="img/temp.jpg"></li>
 									<li class="viewModel"><img src="img/temp.jpg"></li>
@@ -260,7 +260,7 @@
 			item = $(item);
 			viewPlanningData.push({
 				url: item.find('img').attr('src'),
-				caption: item.data('caption') || ''
+				caption: typeof(item.data('caption')) === 'undefined' ? '' : item.data('caption') + ''
 			});
 		});
 
@@ -268,29 +268,34 @@
 			item = $(item);
 			viewModelData.push({
 				url: item.find('img').attr('src'),
-				caption: item.data('caption') || ''
+				caption: typeof(item.data('caption')) === 'undefined' ? '' : item.data('caption') + ''
 			});
 		});
 
 		viewPlanningFull = $.photoBrowser({
-			photos: viewPlanningData
+			photos: viewPlanningData,
+			exposition: false,
+			onClose: function(){
+				$.reinitSwiper();
+			}
 		});
 
 		viewModelFull = $.photoBrowser({
-			photos: viewModelData
+			photos: viewModelData,
+			exposition: false,
+			onClose: function(){
+				$.reinitSwiper();
+			}
 		});
 
-		$(document).on('click', '.viewPlanning', function() {
-			viewPlanningFull.open();
+		$(document).on('click', '.viewPlanning', function() { 
+			viewPlanningFull.open($(this).index());
 		});
 
 		$(document).on('click', '.viewModel', function() {
-			viewModelFull.open();
+			viewModelFull.open($(this).index());
 		});
 
-		$(document).on('click', '.photo-browser-close-link', function() {
-			$.reinitSwiper();
-		});
 		// 图片预览结束
 
 		var scrollers = $('.m-slide-scroller');
