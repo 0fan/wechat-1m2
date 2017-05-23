@@ -9,8 +9,12 @@
 .m-card:last-child { background-image: none; }
 .m-card .m-card-preview { float: left; overflow: hidden; width: 110px; height: 90px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; background-color: #eee; }
 .m-card .m-card-preview img { width: 100%; height: auto; }
-.m-card .m-card-content { min-height: 90px; margin-left: 110px; padding-left: 10px; }
-.m-card .m-card-content .m-card-title { font-size: 14px; line-height: 1.35; margin-bottom: 10px; padding-top: 3px; color: #000; }
+.m-card .m-card-content { min-height: 90px; margin-left: 110px; padding-left: 10px; position: relative;}
+.m-card .m-card-content .m-card-follow{position: absolute;top: 0;right: 0;font-size: 16px;}
+.m-card .m-card-content .m-card-follow:after{content: '\5173\6CE8';color: #}
+.m-card .m-card-content .m-card-follow.active{color: #ddd;}
+.m-card .m-card-content .m-card-follow.active:after{content: '\5DF2\5173\6CE8';}
+.m-card .m-card-content .m-card-title { font-size: 14px; line-height: 1.35; margin-bottom: 10px; padding-top: 3px; color: #000; margin-right: 30px;}
 .m-card .m-card-content .m-card-subtitle { font-size: 13px; margin-bottom: 10px; color: #666; }
 .m-card 
 .m-card-content .m-card-intro { font-size: 11px; color: #999; }
