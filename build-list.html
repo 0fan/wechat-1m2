@@ -39,27 +39,17 @@
 			</nav> -->
 			<!-- /nav -->
 			<!-- content -->
-			<div class="content">	
+			<div style="overflow: hidden" class="content">
 				<div class="content-padded">
 					<div class="row">
-						<div class="col-50">
+						<div id="developer-drop" style="" class="drop-name col-50">
 							<div class="row no-gutter">
-								<div class="col-40">开发商</div>
-								<div class="col-60">
-									<select style="width: 100%;">
-										<option value="">请选择</option>
-									</select>
-								</div>
+								<div class="col-100">开发商 <i class="drop-icon"></i></div>
 							</div>
 						</div>
-						<div class="col-50">
+						<div id="build-drop" class="drop-name col-50">
 							<div class="row no-gutter">
-								<div class="col-40">楼盘</div>
-								<div class="col-60">
-									<select style="width: 100%;">
-										<option value="">请选择</option>
-									</select>
-								</div>
+								<div class="col-100">楼盘  <i class="drop-icon"></i></div>
 							</div>
 						</div>
 					</div>
@@ -79,6 +69,18 @@
 							</div>
 						</div>
 					</div>
+					<div class="m-card border _b" data-url='buildingDetail.html'>
+						<div class="m-card-preview"><img src="img/temp.jpg"></div>
+						<div class="m-card-content">
+							<a href="javascript:void(0);" class="m-card-follow active"></a>
+							<div class="m-card-title"><span class="tag"></span><span class="txt">保利观澜道</span></div>
+							<div class="m-card-subtitle">金科地产集团</div>
+							<div class="m-card-intro">
+								<div class="m-card-intro-item">重庆 江北</div>
+								<div class="m-card-intro-item">2017.03.18</div>
+							</div>
+						</div>
+					</div>
 					<!-- /m-card -->
 				</div>
 			</div>
@@ -86,13 +88,68 @@
 		</div>
 	</div>
 </body>
+<script src="js/vendor/jquery-1.8.3.min.js"></script>
 <script src="js/vendor/zepto.js"></script>
+<scrip>
+	window.$$=window.Zepto = Zepto
+</scrip>
 <script src="js/vendor/sm.min.js"></script>
 <script src="js/vendor/sm-extend.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/drop.js"></script>
 <script>
 	$('.m-card-follow').on('click', function(e) {
 		e.stopPropagation();
 	});
+	$('.drop-name').click(function (e) {
+		e.preventDefault();
+		$(this).toggleClass('active').siblings().removeClass('active');
+  });
+  $('#developer-drop').dropPlug({
+		top:10,
+		time:100,
+    data:[
+      {id:'全部',value:'dasdas'},
+      {id:'金科地产',value:'dasdas'},
+      {id:'重庆绿地',value:'dasdas'}
+    ]
+		,
+  });
+  $('#build-drop').dropPlug({
+    top:10,
+    time:100,
+    data:[
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'3',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'},
+      {id:'1',value:'dasdas'},
+      {id:'2',value:'dasdas'}
+
+    ]
+  })
 </script>
 </html>
