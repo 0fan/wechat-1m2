@@ -1,3 +1,5 @@
+@import './drop.less';
+
 .m-content.padding10 {
   padding: 10px;
 }
@@ -494,10 +496,18 @@
   font-size: 14px;
 }
 .content .content-padded{
-  background: #fff;
-  padding: 10px 0;
-  margin: 0;
-  border-bottom:1px solid #eee;
+  background-color     : #fff;
+  padding              : 10px 0;
+  margin               : 0;
+  background-repeat    : no-repeat;
+  background-image     : -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+  background-image     : -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -o-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : linear-gradient(0deg, #eee 50%, transparent 0);
+  background-position  : bottom;
+  -moz-background-size : 100% 1px;
+  background-size      : 100% 1px;
 }
 .content .content-padded select{
   border: none;
@@ -518,33 +528,4 @@
   font-size: 12px;
   font-weight:600;
   padding-top: 10px;
-}
-.drop-name{
-  text-align: center;
-  color: #000;
-  transition: all .15s linear;
-}
-.drop-name.active{
-  color: #0a8ddf;
-}
-.drop-name.active .drop-icon{
-  transform:rotate(180deg);
-  -ms-transform:rotate(180deg); 	/* IE 9 */
-  -moz-transform:rotate(180deg); 	/* Firefox */
-  -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-  -o-transform:rotate(180deg); 	/* Opera */
-  border-top-color:#0a8ddf;
-}
-.drop-icon{
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-top: 6px solid #999;
-  transition: all .15s linear;
-}
-.drop-option{
-  width: 50%;
-  text-align: center;
-  float: left;
 }

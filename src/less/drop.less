@@ -1,0 +1,74 @@
+.drop-name{
+  text-align: center;
+  color: #000;
+  transition: all .15s linear;
+}
+.drop-name.active{
+  color: #0a8ddf;
+}
+.drop-name.active .drop-icon{
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg);   /* IE 9 */
+  -moz-transform:rotate(180deg);  /* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+  -o-transform:rotate(180deg);  /* Opera */
+  border-top-color:#0a8ddf;
+}
+.drop-icon{
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top: 6px solid #999;
+  transition: all .15s linear;
+  transform-origin: center 3px;
+}
+.drop-option{
+  width: 50%;
+  text-align: center;
+  float: left;
+}
+.dropList {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  height:auto;
+  display:none;
+  background:rgba(0,0,0,.6);
+  z-index:100;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.drop-name.active .dropList {
+  display: block;
+}
+
+.dropList .list-item:first-child {
+  background-image     : -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eee), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+  background-image     : -webkit-linear-gradient(top, #eee 50%, transparent 0), -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -moz-linear-gradient(top, #eee 50%, transparent 0), -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -o-linear-gradient(top, #eee 50%, transparent 0), -o-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : linear-gradient(180deg, #eee 50%, transparent 0), linear-gradient(0deg, #eee 50%, transparent 0);
+  background-position  : top, bottom;
+  -moz-background-size : 100% 1px, 100% 1px;
+  background-size      : 100% 1px, 100% 1px; 
+}
+.dropList .list-item {
+  text-align           :   center;
+  background-repeat    : no-repeat;
+  margin               :0;
+  padding              :0;
+  color                :#000;
+  background-color     :#fff;
+  background-image     : -webkit-gradient(linear, left bottom, left top, color-stop(50%, #eee), color-stop(0, transparent));
+  background-image     : -webkit-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -moz-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : -o-linear-gradient(bottom, #eee 50%, transparent 0);
+  background-image     : linear-gradient(0deg, #eee 50%, transparent 0);
+  background-position  : bottom;
+  -moz-background-size : 100% 1px;
+  background-size      : 100% 1px;
+}
