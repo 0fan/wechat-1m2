@@ -364,6 +364,11 @@
 			initMap();//创建和初始化地图
 		}
 
+//		关注
+    $(document).on('click','.heart ',function (e) {
+      e.preventDefault();
+      $(this).toggleClass('active');
+    });
 	});
 
 </script>
