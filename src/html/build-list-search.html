@@ -17,7 +17,20 @@
 		<div class="page page-current">
 			<!-- header -->
 			<header class="bar bar-nav">
-				<h1 class="title">楼盘列表<Icon class="anticon anticon-search search_icon" type="link" /></h1>
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-media"><i class="icon icon-form-gender"></i></div>
+								<div class="item-inner">
+									<div class="item-input">
+										<input type="text">
+									</div>
+									<Icon class="anticon anticon-search item-icon search_icon" type="link" />
+								</div>
+							</div>
+						</li>
+					</ul>
 			</header>
 			<!-- /header -->
 			<!-- nav -->
@@ -37,23 +50,7 @@
 			</nav> -->
 			<!-- /nav -->
 			<!-- content -->
-			<div style="overflow: hidden" class="content">
-				<div class="content-padded">
-					<div class="row">
-						<div id="developer-drop" style="" class="drop-name col-50">
-							<div class="row no-gutter">
-								<div class="col-100">开发商 <i class="drop-icon"></i></div>
-							</div>
-						</div>
-						<div id="build-drop" class="drop-name col-50">
-							<div class="row no-gutter">
-								<div class="col-100">楼盘  <i class="drop-icon"></i></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="m-content">
+				<div style="margin-top:2.2rem" class="m-content">
 					<!-- m-card -->
 					<div class="m-card border _b" data-url='buildingDetail.html'>
 						<div class="m-card-preview"><img src="img/temp.jpg"></div>
@@ -98,11 +95,7 @@
 //	$('.m-card-follow').on('click', function(e) {
 //		e.stopPropagation();
 //	});
-/*点击搜索按钮*/
-	$('.title .search_icon').on('click',function (e) {
-		e.preventDefault();
-		window.location.href="build-list-search.html"
-	})
+
 
 	$('.drop-name').click(function (e) {
 		e.preventDefault();
