@@ -3,6 +3,21 @@
 .m-content.padding10 {
   padding: 10px;
 }
+.m-content.no-developer{
+  min-height: 100%;
+  background: url('../img/no-developer .png') no-repeat center center;
+  background-size:180px;
+}
+.m-content.no-area{
+  min-height: 100%;
+  background: url('../img/no-area.png') no-repeat center center;
+  background-size:180px;
+}
+.m-content.no-build{
+  min-height: 100%;
+  background: url('../img/no-build.png') no-repeat center center;
+  background-size:180px;
+}
 .m-index-content{
   position: relative;
   min-height: 100%;
@@ -642,6 +657,9 @@
   }
   .list-block{
     margin: 0;
+    ul:after{
+      height: 0;
+    }
     .search_icon{
       position: relative;
       left: 25px;
