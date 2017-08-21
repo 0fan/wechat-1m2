@@ -33,7 +33,10 @@ gulp.task('html', () => {
 /* js */
 gulp.task('js', () => {
   return (
-    gulp.src('./src/js/app.js')
+    gulp.src([
+      './src/js/app.js',
+      './src/js/drop.js'
+    ])
         .pipe(babel())
         .pipe(browserify({
           transform: ['babelify']
@@ -65,6 +68,7 @@ gulp.task('css', () => {
           './src/css/sm.min.css',
           './src/css/sm-extend.min.css',
           './src/css/ant-iconfont.css',
+          './src/css/iconfont.css',
           './src/css/border.css'
         ])
         .pipe(concat('vendor.css'))

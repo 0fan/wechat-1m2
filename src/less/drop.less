@@ -3,6 +3,9 @@
   color: #000;
   transition: all .15s linear;
 }
+.drop-name .drop-title{
+  position: relative;
+}
 .drop-name.active{
   color: #0a8ddf;
 }
@@ -12,18 +15,17 @@
   -moz-transform:rotate(180deg);  /* Firefox */
   -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
   -o-transform:rotate(180deg);  /* Opera */
-  border-top-color:#0a8ddf;
+  color: #0a8ddf;
 }
 .drop-icon{
-  position: relative;
-  top: 4px;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-top: 6px solid #999;
+  position: absolute;
+  right: 20%;
+  top: 2px;
+  display: block;
+  font-size: 14px;
+  color: #828282;
   transition: all .15s linear;
-  transform-origin: center 3px;
+  transform-origin: center 12px;
 }
 .drop-option{
   width: 50%;

@@ -77,6 +77,12 @@ $.fn.dropPlug = function (ct) {
     // if(self.siblings().children('.dropList').is(":visible")){
     //   self.siblings().children('.dropList').fadeOut()
     // }
+    if($('#developer-drop').hasClass('active') || $('#build-drop').hasClass('active')){
+      $('.content').css('overflow','hidden');
+    }else {
+      $('.content').css('overflow','auto');
+    }
+
 
   })
 }
